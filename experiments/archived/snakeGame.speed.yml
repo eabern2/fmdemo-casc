@@ -1,0 +1,24 @@
+# This file was edited by CloudBees Feature Management
+type: experiment
+labels:
+  - archived
+enabled: false
+flag: snakeGame.speed
+availableValues:
+  - slow
+  - insane
+  - fast
+  - normal
+conditions:
+  - property:
+      name: isBetaUser
+      operator: is-false
+    value:
+      - percentage: 25
+        option: slow
+      - percentage: 25
+        option: insane
+      - percentage: 25
+        option: fast
+      - percentage: 25
+        option: normal
